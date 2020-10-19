@@ -1,25 +1,55 @@
 /* -------------------------------------- *
 General Styles
 * --------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Raleway:wght@300&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   /*font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
-  font-family: Avenir;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
+}
+
+header {
+  border: 1px solid black;
+  background-image: url(../images/jonas-kaiser-7HLF8X-eEzM-unsplash.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center 30%;
 }
 
 h1,
 h2,
 h3 {
   font-size: 36px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Playfair Display", serif;
 }
+
+header h1 {
+  font-size: 50px;
+}
+
 main,
 header h1,
 nav div {
   width: 85%;
   margin: auto;
 }
+
+.two-col {
+  display: flex;
+  flex-wrap: ;
+
+}
+
 header {
   padding: 40px 0;
 }
@@ -32,4 +62,20 @@ nav a:hover {
 nav {
   background-color: #ccc;
   padding: 12px;
+}
+
+.insp {
+  width: 800px;
+}
+
+.three-col {
+  display: flex;
+}
+
+.three-col article {
+  flex: 1;
+}
+
+.three-col .description {
+  flex-grow: 2;
 }
