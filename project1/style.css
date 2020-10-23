@@ -1,14 +1,18 @@
 
-* box-model{ border-box; }
+* box-model{ 
+  border-box;
+}
 
 body {
   margin: 0;
   background-color: #ccc;
 }
+
 h1 {
   margin: 0;
   padding: 40px;
 }
+
 header {
   height: 360px;
   background-color: #333;
