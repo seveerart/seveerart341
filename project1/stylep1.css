@@ -17,9 +17,9 @@ span .cause {
   background-position: center;
   background-size: 60%;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
-  /* width: 50vw; */
+  width: 50vw;
 }
 
 main {
