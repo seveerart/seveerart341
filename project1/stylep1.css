@@ -22,11 +22,35 @@ span .cause {
   width: 50vw;
 }
 
+.location-label {
+  position: absolute;
+  transform: rotate(-90deg);
+  margin: 200 auto;
+
+}
+
+.location {
+  margin: 50px 0px 50px 300px;
+  width: 650px;
+  height: 250px;
+  clip-path: fill-box;
+  display: flex;
+}
+
+.colour {
+  margin: 50px 0px 50px 300px;
+  width: 650px;
+  height: 250px;
+  clip-path: fill-box;
+  display: flex;
+}
+
+
 main {
   width: 25%;
   margin: 0% 50% ;
   padding-top: 25px;
-  font-size: 18px;
+  font-size: 14px;
   display: grid;
 }
 
@@ -37,7 +61,6 @@ main {
   font-size: 24px;
   display: flex;
 }
-
 
 h1 {
   margin: 0;
