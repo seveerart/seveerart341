@@ -37,14 +37,18 @@ span .cause {
   display: flex;
 }
 
+.colour-text {
+  margin-left: 300px;
+  width: 650px;
+}
+
 .colour {
-  margin: 50px 0px 50px 300px;
+  margin: 0px 0px 50px 300px;
   width: 650px;
   height: 250px;
   clip-path: fill-box;
   display: flex;
 }
-
 
 main {
   width: 25%;
@@ -102,10 +106,51 @@ header a {
 h2 {
   color: #a0a0a0;
   font-weight: lighter;
+  font-size: 36px;
   margin: 0% 45%;
   width: 45%;
   font-style: oblique;
   padding-top: 75px;
+  padding-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 50px 5px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  margin: 50px 100px 50px 0px;
+}
+
+.grid-image {
+  display: grid;
+  height: 350px;
+  width: 717px;
+  overflow: hidden;
+}
+
+.grid-image img {
+  width: 717px;
+}
+
+h3 {
+  display: grid;
+  margin-left: 50px;
+  margin-top: 105px;
+}
+
+.type {
+  display: flex;
+  width: 80%;
+  margin-top: -15px;
+  padding: 0px 100px 80px 50px;
+}
+
+.arc {
+  display: flex;
+  width: 50%;
+  margin-top: -15px;
+  margin-left: 200px;
 }
 
 ul a:hover {
@@ -115,7 +160,6 @@ ul a:hover {
   text-decoration: none;
   font-size: 24px;
   transition: 250ms linear;
-  /* opacity: .50; */
 }
 
 nav {
@@ -141,4 +185,3 @@ nav a {
   text-decoration: none;
   font-size: 24px;
 }
-
