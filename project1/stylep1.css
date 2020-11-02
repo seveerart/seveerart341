@@ -81,7 +81,6 @@ header {
   color: #fff;
   width: 100vw;
   align-content: center;
-  z-index: -1;
   position: relative;
 }
 
@@ -111,7 +110,7 @@ h2 {
   width: 45%;
   font-style: oblique;
   padding-top: 75px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .grid-container {
