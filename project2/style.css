@@ -1,0 +1,51 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+@font-face {
+    font-family: Bookman;
+    src: url(../project2/Bookman/BookmanStd-Medium.otf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../project2/FuturaStd/FuturaStd-Book.otf);
+}
+
+body {
+  background-color: #494141;
+  margin: 5%;
+}
+
+p {
+    font-family: Futura, 'Helvetica Neue', sans-serif;
+    color: #FEF4E0;
+    font-size: 14px;
+}
+header h1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+}
+
+.side {
+    max-width: 50%;
+}
+
+h1 {
+    font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #FFFBD5;
+}
+
+@media (max-width: 520px) {
+    img {
+    width: 100%;
+    }
+    
+    .mobile-button {
+
+    }
+
+}

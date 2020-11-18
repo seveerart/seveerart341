@@ -3,7 +3,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   background-color: #444444;
@@ -12,14 +11,12 @@ body {
   font-weight: lighter;
 }
 
-span .cause {
-  background-image: url(../project1/images/hakon-sataoen-NU8T8LHaeiA-unsplash.jpg);
-  background-position: center;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  z-index: 2;
+.cause {
+  z-index: -2;
   position: absolute;
   width: 50vw;
+  margin-left: 175px;
+  margin-top: 25px;
 }
 
 .location-label {
