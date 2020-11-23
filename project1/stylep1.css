@@ -90,7 +90,7 @@ h1 a {
 header {
   height: 200px;
   background-color: #333;
-  opacity: 80%;
+  opacity: 70%;
   color: #fff;
   width: 100vw;
   align-content: center;
@@ -191,8 +191,8 @@ nav li {
 }
 
 nav a {
-  color: #000;
-  border: 1px solid #000;
+  color: rgb(133, 133, 133);
+  border: 1px solid rgb(133, 133, 133);
   padding: 6px 16px 6px 80px;
   text-decoration: none;
   font-size: 24px;
