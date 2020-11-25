@@ -18,6 +18,11 @@
     src: url(../project2/FuturaStd/FuturaStd-CondensedBold.otf);
 }
 
+@font-face {
+    font-family: 'FuturaStd-BookOblique';
+    src: url(../project2/FuturaStd/FuturaStd-LightOblique.otf);
+}
+
 body {
   background-color: #494141;
   margin: 5%;
@@ -28,11 +33,6 @@ p {
     color: #FEF4E0;
     font-size: 14px;
 }
-header h1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -15px;
-}
 
 .side {
     max-width: 50%;
@@ -42,12 +42,222 @@ h1 {
     font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
     color: #FFFBD5;
+
 }
 
 @media (max-width: 520px) {
-    img {
-        width: 100%;
+    .mobile-header {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      width: 100%;
     }
+
+    img, .smologo {
+      display: flex;
+      width: 50vw;
+      margin-bottom: 25px;
+  }  
+
+    /* MOBILE MENU */
+    .modal {
+      opacity: 0;
+      padding: auto;
+      position: absolute;
+      z-index: 1100;
+      text-decoration: none;
+      -webkit-transition: opacity 600ms linear 600ms;
+      -moz-transition: opacity 600ms linear 600ms;
+      -ms-transition: opacity 600ms linear 600ms;
+      -o-transition: opacity 600ms linear 600ms;
+      transition: opacity 600ms linear 600ms;
+    }
+    
+    .modal_info {
+      display: grid;
+      grid-template-columns: 125px 125px;
+      gap: 15px;
+      background: #715A5A;
+      opacity: 95%;
+      text-decoration: none;
+      text-align: center;
+      font-family: Bookman, serif;
+      padding: 15px;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .menu-item {
+        display: grid;
+        background-color: #202124;
+        width: 125px;
+        height: 125px;
+        padding: 53px 20px;
+        border-radius: 100%;
+    }
+
+    .menu-item a {
+        color: #e5e5e5;
+        text-decoration: none;
+    }
+    
+    .modal_overlay {
+      background: rgba(0, 0, 0, 0.5);
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      overflow: auto;
+      position: fixed;
+      right: 0;
+      top: 0;
+      visibility: hidden;
+      z-index: 900;
+      -webkit-transition: opacity 200ms linear;
+      -moz-transition: opacity 200ms linear;
+      -ms-transition: opacity 200ms linear;
+      -o-transition: opacity 200ms linear;
+      transition: opacity 200ms linear;
+    }
+    
+    .display {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .conceal {
+      visibility: visible;
+    }
+    
+    .btn_container {
+      height: 100%;
+      /* border: 1px dashed white; */
+      text-align: right;
+      width: 50%;
+      border-radius: 5px;
+      padding-right: 5px;
+
+    }
+    
+    .btn_container:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+      width: 50%;
+    }
+   
+    /* MENU BUTTON */
+    .open_button {
+      /* border: 1px solid yellow; */
+      background: #715a5a;
+      display: inline-flex;
+      justify-content: center;       
+      height: 66px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+      border-radius: 5px;
+      z-index: 1000;
+      -webkit-transition: opacity 100ms linear;
+      -moz-transition: opacity 100ms linear;
+      -ms-transition: opacity 100ms linear;
+      -o-transition: opacity 100ms linear;
+      transition: opacity 100ms linear;
+    }
+    
+    a.open_button {
+      color: #FFFFFF;
+      line-height: 66px;
+      font-family: Bookman, serif;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding-top: 3px;
+    }
+     
+    a.open_button:hover {
+      background: #C3B7B7;
+    }
+    
+    a.open_button.load {
+      opacity: 0;
+    }
+    
+    button.modal_close {
+      background: #363D4E;
+      border: none;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      color: #FFFFFF;
+      cursor: pointer;
+      outline: none;
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      -webkit-transition: -webkit-transform 600ms;
+      -moz-transition: -moz-transform 600ms;
+      -ms-transition: -ms-transform 600ms;
+      -o-transition: -o-transform 600ms;
+      transition: transform 600ms;
+    }
+    
+    button.modal_close:hover {
+      background: #3E465A;
+      -webkit-transform: rotate(360deg) scale(1.10);
+      -moz-transform: rotate(360deg) scale(1.10);
+      -ms-transform: rotate(360deg) scale(1.10);
+      -o-transform: rotate(360deg) scale(1.10);
+      transform: rotate(360deg) scale(1.10);
+      -webkit-transition: -webkit-transform 600ms;
+      -moz-transition: -moz-transform 600ms;
+      -ms-transition: -ms-transform 600ms;
+      -o-transition: -o-transform 600ms;
+      transition: transform 600ms;
+    }
+    
+    button.modal_close span, span:before, span:after {
+      background: #FFFFFF;
+      content: '';
+      cursor: pointer;
+      display: block;
+      height: 2px;
+      position: absolute;
+      width: 20px;
+    }
+    
+    button.modal_close span:first-child {
+      background: none;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    button.modal_close span:before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    
+    button.modal_close span:after {
+      -webkit-transform: translateY(-2px) rotate(-45deg);
+      -moz-transform: translateY(-2px) rotate(-45deg);
+      -ms-transform: translateY(-2px) rotate(-45deg);
+      -o-transform: translateY(-2px) rotate(-45deg);
+      transform: translateY(-2px) rotate(-45deg);
+      top: 2px;
+    } 
+  /* END OF MOBILE MODAL MENU CSS STUFF */
+
 
     /* landing page/home */
     .mobile-button {
@@ -76,17 +286,12 @@ h1 {
       }
     /* end landing page/home  */
     
+
     h1 {
         font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
         font-size: 48px;
         color: #FFFBD5;
     }
-    
-    img, .smologo {
-        display: flex;
-        width: 50vw;
-        margin-bottom: 25px;
-    }  
 
     /* store page */
     .store-container {
@@ -101,7 +306,8 @@ h1 {
     .shop {
         display: grid;
         text-decoration: none;
-        color: #000000;
+        color: #e5e5e5;
+        font-family: Bookman;
         border-radius: 3px;
         height: auto;
     }
@@ -109,15 +315,41 @@ h1 {
     .store-container img {
         width: 100%;
     }
+
+    .shop .artist {
+
+    }
+    
+    .shop .album {
+      font-family: 'FuturaStd-BookOblique';
+      font-size: 14px;
+    }
     /* end of store page */
+
 
     /* contact page */
     h2 {
         font-family: Futura;
         color: #e5e5e5;
     }
-    
+
+    .email-list {
+      width: 80%;
+      height: 25px;
+      background-color: #c4c4c4;
+      cursor: text;
+      border-radius: 3px;
+      margin-top: -12px;
+      font-family: Futura;
+      font-style: oblique;
+      font-size: 15px;
+      vertical-align: center;
+      padding-top: 3px;
+      padding-left: 7px;
+      color: #818181;
+        }
     /* end contact page */
+
 
     /* event page */
     h3 {
@@ -136,195 +368,6 @@ h1 {
 
     }    
     /* end event page */
-
-
-/* MOBILE MENU */
-    .modal {
-        opacity: 0;
-        padding: 50px;
-        position: absolute;
-        z-index: 1100;
-        text-decoration: none;
-        -webkit-transition: opacity 600ms linear 600ms;
-        -moz-transition: opacity 600ms linear 600ms;
-        -ms-transition: opacity 600ms linear 600ms;
-        -o-transition: opacity 600ms linear 600ms;
-        transition: opacity 600ms linear 600ms;
-      }
-      
-      .modal_info {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 150px 150px;
-        background: #FCF9F2;
-        padding: 40px 30px 40px 40px;
-        text-decoration: none;
-        text-align: center;
-        font-family: Bookman, serif;
-      }
-
-      .menu-item {
-          display: grid;
-          background-color: #494141;
-          width: 125px;
-          height: 125px;
-          
-
-      }
-
-      .menu-item a {
-          color: #000000;
-          text-decoration: none;
-      }
-      
-      .modal_overlay {
-        background: rgba(0, 0, 0, 0.5);
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        overflow: auto;
-        position: fixed;
-        right: 0;
-        top: 0;
-        visibility: hidden;
-        z-index: 900;
-        -webkit-transition: opacity 200ms linear;
-        -moz-transition: opacity 200ms linear;
-        -ms-transition: opacity 200ms linear;
-        -o-transition: opacity 200ms linear;
-        transition: opacity 200ms linear;
-      }
-      
-      .display {
-        opacity: 1;
-        visibility: visible;
-      }
-      
-      .conceal {
-        visibility: visible;
-      }
-      
-      .btn_container {
-        height: 100%;
-        text-align: center;
-      }
-      
-      .btn_container:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        width: 0;
-      }
-     
-      /* MENU BUTTON */
-      .open_button {
-        background: #715a5a;
-        display: inline-block;
-        height: 66px;
-        position: relative;
-        vertical-align: middle;
-        width: 30%;
-        z-index: 1000;
-        -webkit-transition: opacity 100ms linear;
-        -moz-transition: opacity 100ms linear;
-        -ms-transition: opacity 100ms linear;
-        -o-transition: opacity 100ms linear;
-        transition: opacity 100ms linear;
-      }
-      
-      a.open_button {
-        color: #FFFFFF;
-        letter-spacing: 2px;
-        line-height: 66px;
-        font-family: Bookman, serif;
-        text-decoration: none;
-        font-size: 18px;
-        text-transform: uppercase;
-      }
-       
-      a.open_button:hover {
-        background: #C3B7B7;
-      }
-      
-      a.open_button.load {
-        opacity: 0;
-      }
-      
-      button.modal_close {
-        background: #363D4E;
-        border: none;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
-        color: #FFFFFF;
-        cursor: pointer;
-        outline: none;
-        width: 52px;
-        height: 52px;
-        position: absolute;
-        right: 30px;
-        top: 30px;
-        -webkit-transition: -webkit-transform 600ms;
-        -moz-transition: -moz-transform 600ms;
-        -ms-transition: -ms-transform 600ms;
-        -o-transition: -o-transform 600ms;
-        transition: transform 600ms;
-      }
-      
-      button.modal_close:hover {
-        background: #3E465A;
-        -webkit-transform: rotate(360deg) scale(1.10);
-        -moz-transform: rotate(360deg) scale(1.10);
-        -ms-transform: rotate(360deg) scale(1.10);
-        -o-transform: rotate(360deg) scale(1.10);
-        transform: rotate(360deg) scale(1.10);
-        -webkit-transition: -webkit-transform 600ms;
-        -moz-transition: -moz-transform 600ms;
-        -ms-transition: -ms-transform 600ms;
-        -o-transition: -o-transform 600ms;
-        transition: transform 600ms;
-      }
-      
-      button.modal_close span, span:before, span:after {
-        background: #FFFFFF;
-        content: '';
-        cursor: pointer;
-        display: block;
-        height: 2px;
-        position: absolute;
-        width: 20px;
-      }
-      
-      button.modal_close span:first-child {
-        background: none;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-      
-      button.modal_close span:before {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-      
-      button.modal_close span:after {
-        -webkit-transform: translateY(-2px) rotate(-45deg);
-        -moz-transform: translateY(-2px) rotate(-45deg);
-        -ms-transform: translateY(-2px) rotate(-45deg);
-        -o-transform: translateY(-2px) rotate(-45deg);
-        transform: translateY(-2px) rotate(-45deg);
-        top: 2px;
-      } 
-    /* END OF MOBILE MODAL MENU CSS STUFF */
 
     }
 

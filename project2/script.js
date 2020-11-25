@@ -4,7 +4,7 @@
     $('.open_button').on('click', function(e){
       modal.open({
         content: $content,
-        width: 450,
+        width: 325,
         height: 270,
       });
       $content.addClass('modal_content');
