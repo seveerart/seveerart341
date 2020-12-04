@@ -24,39 +24,42 @@
 }
 
 body {
-  background-color: #494141;
-  margin: 5%;
-}
-
-p {
     font-family: Futura, 'Helvetica Neue', sans-serif;
     color: #FEF4E0;
     font-size: 14px;
-}
-
-.side {
-    max-width: 50%;
 }
 
 h1 {
     font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
     color: #FFFBD5;
-
 }
 
 @media (max-width: 520px) {
-    .mobile-header {
+  body {
+    background-color: rgb(73, 65, 65);
+    margin: auto;
+  }
+
+    header {
       display: inline-flex;
       flex-wrap: nowrap;
       width: 100%;
     }
 
-    img, .smologo {
+    img, .logo {
       display: flex;
       width: 50vw;
       margin-bottom: 25px;
   }  
+
+    .left .menu-item {
+      visibility: hidden;
+    }
+
+    .right .menu-item {
+      visibility: hidden;
+    }
 
     /* MOBILE MENU */
     .modal {
@@ -134,7 +137,6 @@ h1 {
       width: 50%;
       border-radius: 5px;
       padding-right: 5px;
-
     }
     
     .btn_container:before {
@@ -281,7 +283,7 @@ h1 {
         grid-template-columns: repeat(2, 50%);
         gap: 10px 10px;
         margin: 50px 50px 50px 0px;
-        width: esfgd85vw;
+        /* width: esfgd85vw; */
         height: auto;
       }
     /* end landing page/home  */
@@ -294,6 +296,7 @@ h1 {
     }
 
     /* store page */
+
     .store-container {
         display: grid;
         grid-template-columns: repeat(2, 50%);
@@ -305,9 +308,6 @@ h1 {
 
     .shop {
         display: grid;
-        text-decoration: none;
-        color: #e5e5e5;
-        font-family: Bookman;
         border-radius: 3px;
         height: auto;
     }
@@ -317,7 +317,9 @@ h1 {
     }
 
     .shop .artist {
-
+      text-decoration: none;
+      color: #e5e5e5;
+      font-family: Bookman;
     }
     
     .shop .album {
@@ -365,11 +367,231 @@ h1 {
         padding: 10px 0px 10px 20px;
         margin-bottom: 30px;
         border-radius: 6px;
-
     }    
     /* end event page */
 
+}
+
+@media (min-width: 520px) {
+header {
+    display: inline-flex;
+    position: relative;
+    /* flex-wrap: nowrap; */
+    width: 100%;
+    height: 15%;
+    /* border: springgreen 1px solid; */
+    margin: 0%;
+    justify-content: center;
+  }
+
+body {
+  /* margin: 10px 20px 50px 20px; */
+  margin: 1% 20% 3% 20%;
+}
+
+  .logo {
+    display: flex;
+    width: 30%;
+    margin: auto;
+    position: static;
+  }
+
+  h1 {
+      font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
+      font-size: 48px;
+      color: #FFFBD5;
+      /* padding-left: 10%; */
+  }
+
+  .shop-page {
+    background-image: url(../project2/images/store-bkgd.jpg);
+    background-size: cover;
+  }
+
+  .contact-page {
+    background-image: url(../project2/images/contact-bkgd.jpg);
+    background-size: cover;
+  }
+
+  .bg-color {
+    background-color: rgba(73, 65, 65, .9);
+    padding: 10px 60px;
+  }
+  /* 56tyg6tyghbc3ws */
+
+  .event-page {
+    background-image: url(../project2/images/events-bkgd.jpg);
+  }
+
+  .about-page {
+    background-image: url(../project2/images/about-bkgd.jpg);
+  }
+
+
+/* NAVIGATION & MENU END */
+  .btn_container {
+    visibility: hidden;
+  }
+
+  .left {
+    display: grid;
+    margin-left: auto;
+    grid-template-columns: repeat(2, 45%);
+    gap: 20px;
+    /* padding: 20px; */
+    height: 50%;
+    /* border: yellowgreen solid 1px; */
+  }
+
+  .right {
+    display: grid;
+    margin-right: auto;
+    grid-template-columns: repeat(2, 45%);
+    gap: 20px;
+    /* padding: 20px; */
+    height: 50%;
+    /* border: 1px solid aqua; */
+  }
+  
+      .menu-block {
+        display: grid;
+        background-color: #715A5A;
+        padding: 20px;
+        height: 100%;
+        width: auto;
+        margin: auto;
+        /* border: #c4c4c4 1px dashed; */
+        padding: auto;
+      }
+
+      .menu-block a {
+        color: #e5e5e5;
+        text-decoration: none;
+        width: 125px;
+        height: 125px;
+        margin: auto;
+        padding: auto;
+        /* border: 1px dashed yellow; */
+      }
+
+      .menu-item {
+        display: grid;
+        background-color: #202124;
+        width: 125px;
+        height: 125px;
+        border-radius: 100%;
+        justify-content: center;
+        align-content: center;
+        /* border: 1px solid white; */
+        border: 1px solid yellow;
+      }
+/* NAVIGATION & MENU END */
+
+/* store page */
+  .store-container {
+      display: grid;
+      grid-template-columns: repeat(4, 15%);
+      gap: 50px 45px;
+      margin: auto;
+      width: 75vw;
+      height: auto;
+      /* border: 2px solid yellowgreen; */
     }
 
+  .shop {
+      display: grid;
+      border-radius: 3px;
+      height: auto;
+      border: 2px solid white;
+      padding: 5px;
+    }
+
+      .store-container img {
+          width: 100%;
+          /* border: 2px solid pink; */
+      }
+
+      .artist {
+        font-family: Bookman;
+        font-size: 18px;
+        text-decoration: none;
+        color: #e5e5e5;
+        margin-top: 5px;
+        /* border: 2px dashed purple; */
+      }
+      
+      .album {
+        font-family: 'FuturaStd-BookOblique';
+        font-size: 14px;
+        text-decoration: none;
+        color: #e5e5e5;
+        /* border: 2px solid orchid; */
+      }
+/* end of store page */
+
+
+/* contact page */
+
+  h2 {
+      font-family: Futura;
+      color: #a74f4f;
+      margin-bottom: -5px;
+  }
+
+  .contact-info {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .email-list {
+    width: 50%;
+    height: 30px;
+    background-color: #c4c4c4;
+    cursor: text;
+    border-radius: 3px;
+    margin-top: 12px;
+    font-family: Futura;
+    font-style: oblique;
+    font-size: 15px;
+    vertical-align: center;
+    padding-top: 6px;
+    padding-left: 10px;
+    color: #818181;
+    }
+/* end contact page */
+
+
+/* event page */
+
+  h3 {
+      color: #fffbd5;
+      font-family: 'FuturaStd-CondensedBold';
+      font-size: 30px;
+  }
+
+  .event {
+      color: #e5e5e5;
+      background-color: #868282;
+      padding: 10px 0px 10px 20px;
+      margin-bottom: 30px;
+      border-radius: 6px;
+  }    
+/* end event page */
+
+/* ABOUT PAGE */
+  
+  .about p {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 0px 20px;
+    margin: 50px 50px 50px 25px;
+    width: 75vw;
+    line-height: 16pt;
+    font-size: 12pt;
+  }
+
+
+
+}
 
 

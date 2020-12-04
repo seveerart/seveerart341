@@ -9,18 +9,52 @@
     <!-- FROM https://codepen.io/alannarisse/pen/OJPGwxd -->
 
     <!-- button -->
-    <header class="mobile-header">
-        <img src="../project2/images/mmlogo.png" alt="Music Millennium Logo">
+    <header>
+    <nav class="left">
+        <div class="menu-block">
+            <a href="../project2/store.html">
+                <div class="menu-item">
+                    SHOP
+                </div>
+            </a>            
+        </div>
+        <div class="menu-block">
+            <a href="../project2/event.html">
+                <div class="menu-item">
+                    EVENTS
+                </div>
+            </a>
+    </nav>
+
+    <img class="logo" src="../project2/images/mmlogo.png" alt="Music Millennium Logo">
+
+    <nav class="right">
+        <div class="menu-block">
+            <a href="../project2/about.html">
+                <div class="menu-item">
+                    ABOUT
+                </div>
+            </a>
+        </div>
+        <div class="menu-block">
+            <a href="../project2/contact.html">
+                <div class="menu-item">
+                    CONTACT
+                </div>
+            </a>
+        </div>
+    </nav>
+
     <div class="btn_container">
         <a class="open_button" href="#">menu</a>
     </div>
 
     <!-- open menu stuff -->
     <div class="modal_info">
-        <div class="menu-item"><a href="../project2/store.html">STORE</a></div>
-        <div class="menu-item"><a href="../project2/about.html">ABOUT</a></div>
-        <div class="menu-item"><a href="../project2/contact.html">CONTACT</a></div>
-        <div class="menu-item"><a href="../project2/event.html">EVENTS</a></div>
+        <div class="menu-item"><a class='store' href="../project2/store.html">STORE</a></div>
+        <div class="menu-item"><a class='about' href="../project2/about.html">ABOUT</a></div>
+        <div class="menu-item"><a class='contact' href="../project2/contact.html">CONTACT</a></div>
+        <div class="menu-item"><a class='events' href="../project2/event.html">EVENTS</a></div>
     </div>
 
     <div class="modal_overlay"></div>
@@ -29,8 +63,10 @@
     <script src="../project2/script.js"></script>
     <!-- END JQ STUFF??? -->
     </header>
+
 </head>
-<body>
+<body class="event-page">
+    <div class="bg-color">
 
     <h1>EVENTS</h1>
 
@@ -49,5 +85,6 @@
             <p>Music Millennium's 51st Anniversary!</p>
             <p>Music Millennium @ 3PM – 6PM</p>
     </section>
+    </div>
 </body>
 </html>
