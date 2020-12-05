@@ -393,6 +393,7 @@ body {
     display: flex;
     width: 30%;
     margin: auto;
+    margin-left: 15px;
     position: static;
   }
 
@@ -436,8 +437,8 @@ body {
   .left {
     display: grid;
     margin-left: auto;
-    grid-template-columns: repeat(2, 45%);
-    gap: 20px;
+    grid-template-columns: repeat(2, 50%);
+    gap: 15px;
     /* padding: 20px; */
     height: 50%;
     /* border: yellowgreen solid 1px; */
@@ -446,8 +447,8 @@ body {
   .right {
     display: grid;
     margin-right: auto;
-    grid-template-columns: repeat(2, 45%);
-    gap: 20px;
+    grid-template-columns: repeat(2, 50%);
+    gap: 15px;
     /* padding: 20px; */
     height: 50%;
     /* border: 1px solid aqua; */
@@ -490,10 +491,10 @@ body {
 /* store page */
   .store-container {
       display: grid;
-      grid-template-columns: repeat(4, 15%);
-      gap: 50px 45px;
+      grid-template-columns: repeat(4, 22%);
+      gap: 40px 30px;
       margin: auto;
-      width: 75vw;
+      width: 50vw;
       height: auto;
       /* border: 2px solid yellowgreen; */
     }
@@ -534,7 +535,7 @@ body {
 
   h2 {
       font-family: Futura;
-      color: #a74f4f;
+      color: #FFFBD5;
       margin-bottom: -5px;
   }
 
