@@ -405,29 +405,38 @@ body {
   }
 
   .shop-page {
-    background-image: url(../project2/images/store-bkgd.jpg);
+    background-image: url(../project2/images/store-bkgd-transp.png);
     background-size: cover;
   }
 
   .contact-page {
-    background-image: url(../project2/images/contact-bkgd.jpg);
+    background-image: url(../project2/images/contact-bkgd-transp.png);
     background-size: cover;
   }
 
   .bg-color {
     background-color: rgba(73, 65, 65, .9);
     padding: 10px 60px;
+    z-index: 3;
   }
   /* 56tyg6tyghbc3ws */
 
   .event-page {
-    background-image: url(../project2/images/events-bkgd.jpg);
+    background-image: url(../project2/images/events-bkgd-transp.png);
+    background-size: cover;
   }
 
   .about-page {
-    background-image: url(../project2/images/about-bkgd.jpg);
+    background-image: url(../project2/images/about-bkgd-transp.png);
+    background-size: cover;
   }
 
+  .transbox {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.6;
+    background-size: cover;
+    position: absolute;
+  }
 
 /* NAVIGATION & MENU END */
   .btn_container {
@@ -483,9 +492,24 @@ body {
         border-radius: 100%;
         justify-content: center;
         align-content: center;
-        /* border: 1px solid white; */
+        position: absolute;
         border: 1px solid yellow;
       }
+
+      .recorddisk {
+        position:absolute;
+        width: 125px;
+        height: 125px;
+        z-index: -11;
+        display: block;
+        transition: all .25s ease-out;
+        background-color: #202124;
+        border-radius: 50%;
+        }
+
+        div.menu-block:hover .recorddisk {
+          transform:  translateY(60px);
+          }
 /* NAVIGATION & MENU END */
 
 /* store page */
@@ -581,14 +605,20 @@ body {
 
 /* ABOUT PAGE */
   
-  .about p {
+  .about-container {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 55% 40%);
     gap: 0px 20px;
-    margin: 50px 50px 50px 25px;
-    width: 75vw;
+    margin: -15px 50px 50px 25px;
+    width: 50vw;
     line-height: 16pt;
     font-size: 12pt;
+    position: relative;
+  }
+
+  .about-container img {
+    width: 100%;
+    margin-top: 15px;
   }
 
 
