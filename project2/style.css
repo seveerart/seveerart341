@@ -417,6 +417,7 @@ body {
   .bg-color {
     background-color: rgba(73, 65, 65, .9);
     padding: 10px 60px;
+    padding-bottom: 50px;
     z-index: 3;
   }
   /* 56tyg6tyghbc3ws */
@@ -556,6 +557,18 @@ body {
 
 
 /* contact page */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: min-content;
+    gap: 15px 20px;
+  }
+
+  .contact-item {
+    display: grid;
+    border: 2px solid white;
+    padding: 5px 5px 5px 15px;
+  }
 
   h2 {
       font-family: Futura;
@@ -569,7 +582,7 @@ body {
   }
 
   .email-list {
-    width: 50%;
+    width: 75%;
     height: 30px;
     background-color: #c4c4c4;
     cursor: text;
@@ -579,7 +592,7 @@ body {
     font-style: oblique;
     font-size: 15px;
     vertical-align: center;
-    padding-top: 6px;
+    padding-top: 4px;
     padding-left: 10px;
     color: #818181;
     }
