@@ -35,6 +35,11 @@ h1 {
     color: #FFFBD5;
 }
 
+a {
+  text-decoration: none;
+  color: #FEF4E0;
+}
+
 @media (max-width: 520px) {
   body {
     background-color: rgb(73, 65, 65);
@@ -51,7 +56,7 @@ h1 {
       display: flex;
       width: 50vw;
       margin-bottom: 25px;
-  }  
+  }
 
     .left .menu-item {
       visibility: hidden;
@@ -74,7 +79,7 @@ h1 {
       -o-transition: opacity 600ms linear 600ms;
       transition: opacity 600ms linear 600ms;
     }
-    
+
     .modal_info {
       display: grid;
       grid-template-columns: 125px 125px;
@@ -102,7 +107,7 @@ h1 {
         color: #e5e5e5;
         text-decoration: none;
     }
-    
+
     .modal_overlay {
       background: rgba(0, 0, 0, 0.5);
       bottom: 0;
@@ -120,16 +125,16 @@ h1 {
       -o-transition: opacity 200ms linear;
       transition: opacity 200ms linear;
     }
-    
+
     .display {
       opacity: 1;
       visibility: visible;
     }
-    
+
     .conceal {
       visibility: visible;
     }
-    
+
     .btn_container {
       height: 100%;
       /* border: 1px dashed white; */
@@ -138,7 +143,7 @@ h1 {
       border-radius: 5px;
       padding-right: 5px;
     }
-    
+
     .btn_container:before {
       content: '';
       display: inline-block;
@@ -147,13 +152,13 @@ h1 {
       width: 0;
       width: 50%;
     }
-   
+
     /* MENU BUTTON */
     .open_button {
       /* border: 1px solid yellow; */
       background: #715a5a;
       display: inline-flex;
-      justify-content: center;       
+      justify-content: center;
       height: 66px;
       position: relative;
       vertical-align: middle;
@@ -166,7 +171,7 @@ h1 {
       -o-transition: opacity 100ms linear;
       transition: opacity 100ms linear;
     }
-    
+
     a.open_button {
       color: #FFFFFF;
       line-height: 66px;
@@ -176,15 +181,15 @@ h1 {
       text-transform: uppercase;
       padding-top: 3px;
     }
-     
+
     a.open_button:hover {
       background: #C3B7B7;
     }
-    
+
     a.open_button.load {
       opacity: 0;
     }
-    
+
     button.modal_close {
       background: #363D4E;
       border: none;
@@ -207,7 +212,7 @@ h1 {
       -o-transition: -o-transform 600ms;
       transition: transform 600ms;
     }
-    
+
     button.modal_close:hover {
       background: #3E465A;
       -webkit-transform: rotate(360deg) scale(1.10);
@@ -221,7 +226,7 @@ h1 {
       -o-transition: -o-transform 600ms;
       transition: transform 600ms;
     }
-    
+
     button.modal_close span, span:before, span:after {
       background: #FFFFFF;
       content: '';
@@ -231,7 +236,7 @@ h1 {
       position: absolute;
       width: 20px;
     }
-    
+
     button.modal_close span:first-child {
       background: none;
       bottom: 0;
@@ -241,7 +246,7 @@ h1 {
       right: 0;
       top: 0;
     }
-    
+
     button.modal_close span:before {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -249,7 +254,7 @@ h1 {
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
     }
-    
+
     button.modal_close span:after {
       -webkit-transform: translateY(-2px) rotate(-45deg);
       -moz-transform: translateY(-2px) rotate(-45deg);
@@ -257,7 +262,7 @@ h1 {
       -o-transform: translateY(-2px) rotate(-45deg);
       transform: translateY(-2px) rotate(-45deg);
       top: 2px;
-    } 
+    }
   /* END OF MOBILE MODAL MENU CSS STUFF */
 
 
@@ -287,7 +292,7 @@ h1 {
         height: auto;
       }
     /* end landing page/home  */
-    
+
 
     h1 {
         font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
@@ -321,7 +326,7 @@ h1 {
       color: #e5e5e5;
       font-family: Bookman;
     }
-    
+
     .shop .album {
       font-family: 'FuturaStd-BookOblique';
       font-size: 14px;
@@ -367,7 +372,7 @@ h1 {
         padding: 10px 0px 10px 20px;
         margin-bottom: 30px;
         border-radius: 6px;
-    }    
+    }
     /* end event page */
 
 }
@@ -376,7 +381,6 @@ h1 {
 header {
     display: inline-flex;
     position: relative;
-    /* flex-wrap: nowrap; */
     width: 100%;
     height: 15%;
     /* border: springgreen 1px solid; */
@@ -389,13 +393,18 @@ body {
   margin: 1% 20% 3% 20%;
 }
 
-  .logo {
-    display: flex;
-    width: 30%;
-    margin: auto;
-    margin-left: 15px;
-    position: static;
-  }
+.btn_container, .mobile-button {
+  visibility: hidden;
+  width: 0%;
+}
+
+a .logo {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  /* border: #000000 1px solid; */
+}
 
   h1 {
       font-family: Bookman, Georgia, 'Times New Roman', Times, serif;
@@ -432,54 +441,64 @@ body {
     background-size: cover;
   }
 
-  .transbox {
-    background-color: rgb(255, 255, 255);
-    opacity: 0.6;
-    background-size: cover;
-    position: absolute;
-  }
-
 /* NAVIGATION & MENU END */
-  .btn_container {
-    visibility: hidden;
-  }
+
+/* landing nav */
+.homepage img {
+  display: grid;
+  width: 70%;
+}
+
+.mobile-nav {
+  visibility: hidden;
+}
+
+.landing-nav {
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+  height: 50%;
+}
+
+.nav-block {
+  display: grid;
+  background-color: #715A5A;
+  padding: 20px;
+  height: 100%;
+  width: auto;
+}
+
+/* land nav end */
+
 
   .left {
     display: grid;
-    margin-left: auto;
     grid-template-columns: repeat(2, 50%);
-    gap: 15px;
-    /* padding: 20px; */
     height: 50%;
     /* border: yellowgreen solid 1px; */
   }
 
   .right {
     display: grid;
-    margin-right: auto;
     grid-template-columns: repeat(2, 50%);
-    gap: 15px;
-    /* padding: 20px; */
     height: 50%;
     /* border: 1px solid aqua; */
   }
-  
+
       .menu-block {
         display: grid;
         background-color: #715A5A;
         padding: 20px;
         height: 100%;
         width: auto;
-        margin: auto;
-        /* border: #c4c4c4 1px dashed; */
-        padding: auto;
+        border: #c4c4c4 1px dashed;
+        /* padding: auto; */
       }
 
       .menu-block a {
         color: #e5e5e5;
         text-decoration: none;
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 120px;
         margin: auto;
         padding: auto;
         /* border: 1px dashed yellow; */
@@ -488,8 +507,8 @@ body {
       .menu-item {
         display: grid;
         background-color: #202124;
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 120px;
         border-radius: 100%;
         justify-content: center;
         align-content: center;
@@ -545,7 +564,7 @@ body {
         margin-top: 5px;
         /* border: 2px dashed purple; */
       }
-      
+
       .album {
         font-family: 'FuturaStd-BookOblique';
         font-size: 14px;
@@ -613,11 +632,11 @@ body {
       padding: 10px 0px 10px 20px;
       margin-bottom: 30px;
       border-radius: 6px;
-  }    
+  }
 /* end event page */
 
 /* ABOUT PAGE */
-  
+
   .about-container {
     display: grid;
     grid-template-columns: repeat(2, 55% 40%);
