@@ -444,6 +444,11 @@ a .logo {
 /* NAVIGATION & MENU END */
 
 /* landing nav */
+.homepage {
+  display: grid;
+  
+}
+
 .homepage img {
   display: grid;
   width: 70%;
