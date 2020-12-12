@@ -448,12 +448,14 @@ a .logo {
   display: grid;
   background-image: url(../project2/images/landing-bkgd.jpg);
   background-size: cover;
+  margin: 20px;
   
 }
 
 .homepage img {
   display: grid;
-  width: 70%;
+  width: 50%;
+  margin-left: 50px;
 }
 
 .mobile-nav {
@@ -471,8 +473,9 @@ a .logo {
   display: grid;
   background-color: #715A5A;
   padding: 20px;
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 50%;
+  right: auto;
 }
 
 .nav-block a {
@@ -482,7 +485,6 @@ a .logo {
   height: 120px;
   margin: auto;
   padding: auto;
-  /* border: 1px dashed yellow; */
 }
 
 .nav-block .menu-item {
@@ -496,6 +498,10 @@ a .logo {
   position: absolute;
   border: 1px solid yellow;
 }
+
+div.nav-block:hover .recorddisk {
+  transform:  translateX(60px);
+  }
 /* land nav end */
 
 
